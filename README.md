@@ -8,11 +8,15 @@ Often times we'll want to reshape or change the dimensions of your tensors witho
 
 if you've got shape mismatches, you'll run into errors. These methods help you make sure the right elements of your tensors are mixing with the right elements of other tensors.
 
-add an extra dimension with torch.reshape()
-change the view with torch.view().
-use torch.squeeze() (I remember this as squeezing the tensor to only have dimensions over 1).
-use torch.unsqueeze() to add a dimension value of 1 at a specific index.
-You can also rearrange the order of axes values with torch.permute(input, dims), where the input gets turned into a view with new dims.
+add an extra dimension with `torch.reshape()`
+
+change the view with `torch.view().`
+
+use `torch.squeeze()` ( squeezing the tensor to only have dimensions over 1).
+
+use `torch.unsqueeze()` to add a dimension value of 1 at a specific index.
+
+You can also rearrange the order of axes values with `torch.permute(input, dims)`, where the input gets turned into a view with new dims.
 
 
 ## Indexing (selecting data from tensors)
