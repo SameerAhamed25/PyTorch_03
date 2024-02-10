@@ -2,17 +2,18 @@
 
 **Reshaping, stacking, squeezing and unsqueezing**
 
-| https://pytorch.org/docs/stable/generated/torch.reshape.html#torch.reshape | Reshapes input to shape (if compatible), can also use torch.Tensor.reshape(). |
-| --- | --- |
-| https://pytorch.org/docs/stable/generated/torch.Tensor.view.html | Returns a view of the original tensor in a different shape but shares the same data as the original tensor. |
-| https://pytorch.org/docs/1.9.1/generated/torch.stack.html | Concatenates a sequence of tensors along a new dimension (dim), all tensors must be same size. |
-| https://pytorch.org/docs/stable/generated/torch.squeeze.html | Squeezes input to remove all the dimenions with value 1. |
-| https://pytorch.org/docs/1.9.1/generated/torch.unsqueeze.html | Returns input with a dimension value of 1 added at dim. |
-| https://pytorch.org/docs/stable/generated/torch.permute.html | Returns a view of the original input with its dimensions permuted (rearranged) to dims. |
+Because deep learning models (neural networks) are all about manipulating tensors in some way. And because of the rules of matrix multiplication, if you've got shape mismatches, you'll run into errors. These methods help you make sure the right elements of your tensors are mixing with the right elements of other tensors.
 
 Often times we'll want to reshape or change the dimensions of your tensors without actually changing the values inside them.
 
 if you've got shape mismatches, you'll run into errors. These methods help you make sure the right elements of your tensors are mixing with the right elements of other tensors.
+
+add an extra dimension with torch.reshape()
+change the view with torch.view().
+use torch.squeeze() (I remember this as squeezing the tensor to only have dimensions over 1).
+use torch.unsqueeze() to add a dimension value of 1 at a specific index.
+You can also rearrange the order of axes values with torch.permute(input, dims), where the input gets turned into a view with new dims.
+
 
 ## Indexing (selecting data from tensors)
 
